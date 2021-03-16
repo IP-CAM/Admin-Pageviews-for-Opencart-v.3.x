@@ -1,0 +1,78 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ heading_top }}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td class="text-left">{{ column_title }}</td>
+            <td class="text-left">{{ column_url }}</td>
+            <td class="text-right">{{ column_count }}</td>
+          </tr>
+        </thead>
+        <tbody>
+        
+        {% if ( views['top'] ) and ( views['top'] | length > 0 ) %}
+        {% for view in views['top'] %}
+        <tr>
+          <td class="text-left">{{ view.title }}</td>
+          <td class="text-left">{{ view.url }}</td>
+          <td class="text-right">{{ view.count }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td class="text-center" colspan="3">{{ text_no_results }}</td>
+        </tr>
+        {% endif %}
+        </tbody>
+        
+      </table>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ heading_title }}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td class="text-left">{{ column_title }}</td>
+            <td class="text-left">{{ column_url }}</td>
+            <td class="text-right">{{ column_date }}</td>
+            <td class="text-right">{{ column_ip }}</td>
+            <td class="text-right">{{ column_id }}</td>
+          </tr>
+        </thead>
+        <tbody>
+        
+        {% if ( views['all'] ) and ( views['all'] | length > 0 ) %}
+        {% for view in views['all'] %}
+        <tr>
+          <td class="text-left">{{ view.title }}</td>
+          <td class="text-left">{{ view.url }}</td>
+          <td class="text-right">{{ view.date }}</td>
+          <td class="text-right">{{ view.ip_address }}</td>
+          {% if ( view.user_id == 0 ) %}
+          <td class="text-right"></td>
+          {% else %}
+          <td class="text-right">{{ view.user_id }}</td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td class="text-center" colspan="5">{{ text_no_results }}</td>
+        </tr>
+        {% endif %}
+        </tbody>
+        
+      </table>
+    </div>
+  </div>
+</div>
