@@ -1,12 +1,5 @@
-Lien pour accéder au site Web hébergé sur WebDev : https://e2095066.webdev.cmaisonneuve.qc.ca/tp2/
-Lien pour accéder à l'interface d'administration : https://e2095066.webdev.cmaisonneuve.qc.ca/tp2/admin/
-
-Administrateur :
-    utilisateur     = admin
-    mot de passe    = admin
-
 Pour installer l'extension Pageviews, il suffit de téléverser le dossier admin
-à la racine du dossier du site Web, sur le serveur de destination.
+à la racine du dossier du site Web OpenCart, sur le serveur de destination.
 
 Une fois les fichiers téléversés sur le serveur de destination,
 il faudra se rendre dans l'interface d'administration pour :
